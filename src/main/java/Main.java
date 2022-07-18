@@ -1,5 +1,7 @@
+import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Collection;
 
 public class Main {
     public static void main(String[] args) {
@@ -11,7 +13,14 @@ public class Main {
     }
 
     public static ArrayList<Integer> mergeTwoArrayLists(ArrayList<Integer> l1, ArrayList<Integer> l2) {
-        // your code here
-        return null;
+        ArrayList<Integer> newList = new ArrayList<>();
+        l1.addAll(l2);
+        for (Integer i:l1) {
+           if(i >= 0)
+           {
+               newList.add(i);
+           }
+        }
+        return newList;
     }
 }
